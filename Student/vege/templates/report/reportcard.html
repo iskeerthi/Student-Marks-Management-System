@@ -1,0 +1,169 @@
+{% extends "base2.html" %}
+{% load static %}
+
+{% block start %}
+<div class="container mt-5">
+<form class="mb-4">
+    <div class="row">
+        
+        {% if messages %}
+        <div id="alert-container">
+        <div class="alert alert-primary" role="alert">
+            {% for message in messages %}
+            {{message}}
+            {% endfor %}
+        </div></div>
+        {% endif %}
+        
+    </div>
+</form>
+<center>
+<h1 style="color: white;">Report Card</h1> </center>
+ <h4 style="color: white;"> Roll No: {{queryset.rollno}} </h4>
+ <h4 style="color: white;"> Name: {{queryset.student_name}} </h4>
+
+ <br>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            
+            <th scope="col">Subject</th>
+            <th scope="col">S1</th>
+            <th scope="col">S2</th>
+            <th scope="col">Avg_S</th>
+            <th scope="col">I1</th>
+            <th scope="col">I2</th>
+            <th scope="col">Avg_I</th>
+            <th scope="col">Total</th>
+            
+          </tr>
+        </thead>
+
+        <tbody>
+          
+            {% for student in etc_marks%}
+          <tr>
+            
+            <td><b>ETC</b></td>
+            <td>{{student.s1_marks}}</td>
+            <td>{{student.s2_marks}}</td>
+            <td>{{student.avg_s_marks}}</td>
+            <td>{{student.i1_marks}}</td>
+            <td>{{student.i2_marks}}</td>
+            <td>{{student.avg_i_marks}}</td>
+            <td>{{student.total}}</td>
+          </tr>
+    
+     {% endfor %}
+
+     {% for student in fa_marks%}
+          <tr>
+            
+            <td><b>FA</b></td>
+            <td>{{student.s1_marks}}</td>
+            <td>{{student.s2_marks}}</td>
+            <td>{{student.avg_s_marks}}</td>
+            <td>{{student.i1_marks}}</td>
+            <td>{{student.i2_marks}}</td>
+            <td>{{student.avg_i_marks}}</td>
+            <td>{{student.total}}</td>
+          </tr>
+    
+     {% endfor %}
+
+     {% for student in m3_marks%}
+          <tr>
+            
+            <td><b>M3</b></td>
+            <td>{{student.s1_marks}}</td>
+            <td>{{student.s2_marks}}</td>
+            <td>{{student.avg_s_marks}}</td>
+            <td>{{student.i1_marks}}</td>
+            <td>{{student.i2_marks}}</td>
+            <td>{{student.avg_i_marks}}</td>
+            <td>{{student.total}}</td>
+          </tr>
+    
+     {% endfor %}
+
+     {% for student in ss_marks%}
+     <tr>
+       
+       <td><b>S & S</b></td>
+       <td>{{student.s1_marks}}</td>
+       <td>{{student.s2_marks}}</td>
+       <td>{{student.avg_s_marks}}</td>
+       <td>{{student.i1_marks}}</td>
+       <td>{{student.i2_marks}}</td>
+       <td>{{student.avg_i_marks}}</td>
+       <td>{{student.total}}</td>
+     </tr>
+
+{% endfor %}
+
+{% for student in os_marks%}
+     <tr>
+       
+       <td><b>OS</b></td>
+       <td>{{student.s1_marks}}</td>
+       <td>{{student.s2_marks}}</td>
+       <td>{{student.avg_s_marks}}</td>
+       <td>{{student.i1_marks}}</td>
+       <td>{{student.i2_marks}}</td>
+       <td>{{student.avg_i_marks}}</td>
+       <td>{{student.total}}</td>
+     </tr>
+
+{% endfor %}
+
+{% for student in co_marks%}
+     <tr>
+       
+       <td><b>CO</b></td>
+       <td>{{student.s1_marks}}</td>
+       <td>{{student.s2_marks}}</td>
+       <td>{{student.avg_s_marks}}</td>
+       <td>{{student.i1_marks}}</td>
+       <td>{{student.i2_marks}}</td>
+       <td>{{student.avg_i_marks}}</td>
+       <td>{{student.total}}</td>
+     </tr>
+
+{% endfor %}
+
+{% for student in dbms_marks%}
+     <tr>
+       
+       <td><b>DBMS</b></td>
+       <td>{{student.s1_marks}}</td>
+       <td>{{student.s2_marks}}</td>
+       <td>{{student.avg_s_marks}}</td>
+       <td>{{student.i1_marks}}</td>
+       <td>{{student.i2_marks}}</td>
+       <td>{{student.avg_i_marks}}</td>
+       <td>{{student.total}}</td>
+     </tr>
+
+{% endfor %}
+
+        </tbody>
+      </table>
+
+      
+    <script>
+      // Add a timer to hide the alert after 5 seconds (adjust as needed)
+      setTimeout(function() {
+        var alertContainer = document.getElementById('alert-container');
+        if (alertContainer) {
+          alertContainer.style.display = 'none';
+        }
+      }, 5000); // 5000 milliseconds = 5 seconds
+    </script>
+
+
+
+        {% endblock %}
+
+        
+        
+        

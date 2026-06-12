@@ -1,0 +1,674 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title> Matrusri Engineering college </title>
+  <link rel="icon" href="C:\Users\sindi\OneDrive\Documents\Student_django_v3\student\mat.jpg">
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}">
+ 
+
+  <!-- fonts style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+
+  <!-- font awesome style -->
+  <link href="{% static 'font-awesome.min.css' %}" rel="stylesheet" />
+  <!-- nice select -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'style.css' %}" rel="stylesheet" />
+
+  <!-- responsive style -->
+  <link href="{% static 'responsive.css' %}" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="/index">
+            <span>
+              Matrusri Engineering College
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/index">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about"> About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/courses">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login2">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span>
+                    Login
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/register2">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span>
+                    Sign Up
+                  </span>
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div class="container ">
+        <div class="row">
+          <div class="col-lg-9 col-md-12 mx-auto">
+            <div class="detail-box">
+              <h1>
+                Build Your <br>
+                POWERFUL CAREER WORTHY RESUME <BR>
+                WITH US!!
+              </h1>
+              <p>
+                An Autonomous Institution | Affiliated to Osmania University
+              </p>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+  <!-- category section -->
+  <section class="category_section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-xl-2 px-0">
+          <a href="#" class="box">
+            <div class="img-box">
+              <img src="{% static 'images/c1.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Web Design
+              </h5>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4 col-xl-2 px-0">
+          <a href="#" class="box">
+            <div class="img-box">
+              <img src="{% static 'images/c2.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Web Development
+              </h5>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4 col-xl-2 px-0">
+          <a href="#" class="box">
+            <div class="img-box">
+              <img src="{% static 'images/c3.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Graphic Design
+              </h5>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4 col-xl-2 px-0">
+          <a href="#" class="box">
+            <div class="img-box">
+              <img src="{% static 'images/c4.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Data Analytics
+              </h5>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4 col-xl-2 px-0">
+          <a href="#" class="box">
+            <div class="img-box">
+              <img src="{% static 'images/c5.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Accounting
+              </h5>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4 col-xl-2 px-0">
+          <a href="#" class="box">
+            <div class="img-box">
+              <img src="{% static 'images/c6.png' %}" alt="">
+             
+            </div>
+            <div class="detail-box">
+              <h5>
+                Content Writing
+              </h5>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end category section -->
+
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About Us
+              </h2>
+            </div>
+            <p>
+              Matrusri Engineering College, Saidabad, was established by Matrusri Education Society in 2011. 
+              The society was registered in 1980 with a group of far-sighted and distinguished engineers, doctors, lawyers, and administrators as its members, 
+              having a lofty vision and mission of imparting technical education of the highest standards among the students.
+              The college offers courses in Civil Engineering, Computer Science and Engineering, Electronics and Communication Engineering, 
+              Electrical and Electronics Engineering, Information Technology, and Mechanical Engineering. 
+              The instructional facilities are spacious, and the laboratories are continuously upgraded with state-of-the-art equipment. </p>
+              <p>
+              The college has a sophisticated Digital Library and also boasts an impressive repository of technical reference books and magazines 
+              catering to the needs of the students and faculty. 
+              Every effort is made to ensure that the students are trained in technical skills while inculcating in them a sense of social responsibility, 
+              in tune with the vision and mission of the college.
+                          </p>
+                          <a href="https://matrusri.edu.in/" target="_blank">
+              Read More
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{% static 'images/about-img.jpg' %}" alt="">
+            
+          </div>
+          <img src="{% static 'images/logo_credits.png' %}">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- job section -->
+  <section class="job_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          COURSES OFFERED
+        </h2>
+      </div>
+      <div class="job_container">
+        <center>
+        <h4 class="job_heading">
+          HIGH-DEMAND COURSES
+        </h4>
+    </center>
+
+
+        <div class="row">
+
+
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                
+                  <img src="{% static 'images/job_logo1.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Computer Science and Engineering (Data Science)
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                      <span>
+                        No. of Seats - 60
+                      </span>
+                    </h6>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                
+                <a href="" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{% static 'images/job_logo2.png' %}" alt="">
+                  
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Mechanical Engineering
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <span>
+                          No. of Seats - 60
+                        </span>
+                      </h6>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                
+                <a href="" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="job_container">
+        <center><h4 class="job_heading">
+          OTHER ENGINEERING COURSES
+        </h4>
+    </center>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{% static 'images/job_logo3.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Information Technology
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <span>
+                          No. of Seats - 120
+                        </span>
+                      </h6>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="option-box">
+                
+                <a href="" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{% static 'images/job_logo6.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Civil Engineering
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <span>
+                          No. of Seats - 60
+                        </span>
+                      </h6>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <a href="" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{% static 'images/job_logo6.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Electrical and Electronics Engineering
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <span>
+                          No. of Seats - 60
+                        </span>
+                      </h6>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <a href="" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{% static 'images/job_logo6.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Computer Science and Engineering
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <span>
+                          No. of Seats - 240
+                        </span>
+                      </h6>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <a href="" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          </div>
+      <div class="btn-box">
+        <a href="https://matrusri.edu.in/" target="_blank">
+          View All
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- end job section -->
+  <!-- expert section -->
+
+  <section class="expert_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          OUR DISTINGUISHED ALUMNI
+        </h2>
+        <p>
+          Welcome to the strong community of Matrusri Engineering College graduates that has earned a reputation for excellence and leadership in diverse fields.
+          A network that comprises graduates of various programmes. </p>
+          <p>Bond with your batchmates. Stay connected with your alma mater here. 
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'images/e1.jpg' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <a href="">
+                <center> Martin Anderson </center>
+              </a>
+              <h6 class="expert_position">
+                <span>
+                  Software Developer
+                </span>
+                <span>
+                  Cognizant
+                </span>
+              </h6>
+                <p> Connect on LinkedIn: <i class="fa fa-linkedin-square" aria-hidden="true"></i></p>
+              
+              <br>
+              <p>
+                My sincere appreciation and gratitude to the Department of Computer Science for their efforts in imparting knowledge in the best way possible.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'images/e2.jpg' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <a href="">
+               <center> Semanta Klores </center> 
+              </a>
+              <h6 class="expert_position">
+                <span>
+                  Graphic Designer
+                </span>
+                <span>
+                  Deloitte
+                </span>
+              </h6>
+              <p> Connect on LinkedIn: <i class="fa fa-linkedin-square" aria-hidden="true"></i></p>
+              <br> <br>
+              <p>
+                A huge thanks to the teachers for being encouraging and a guiding light to all the students.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'images/e3.jpg' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <a href="">
+              <center> Ryan Martines </center> 
+              </a>
+              <h6 class="expert_position">
+                <span>
+                  Data Analyst
+                </span>
+                <span>
+                  Tech Mahindra Limited
+                </span>
+              </h6>
+              <p> Connect on LinkedIn: <i class="fa fa-linkedin-square" aria-hidden="true"></i></p>
+              <br>
+              <p>
+                The Placement Cell has helped me in garnering industrial skills for getting placement opportunities in reputed IT companies.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="https://matrusri.edu.in/internships-tp/"  target="_blank">
+          Connect with Alumni
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end expert section -->
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 info_links">
+          <h4>
+            Menu
+          </h4>
+          <ul>
+            <li class="active">
+              <a href="/index">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/about">
+                About
+              </a>
+            </li>
+            <li>
+              <a class="" href="/courses">
+                Courses
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h4>
+            Our Vision
+          </h4>
+          <p>
+            To be a premier academic instituion striving continuously for excellence in technical education, research and technological service to the nation.
+          </p>
+        </div>
+        <div class="col-md-3">
+          <div class="info_social">
+            <h4>
+              Social Link
+            </h4>
+            <div class="social_container">
+              <div>
+                <a href="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div>
+                <a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div>
+                <a href="">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div>
+                <a href="">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info_form">
+            <h4> <center>
+              Contact us </center>
+            </h4>
+            <form action="">
+                <input type="text" placeholder="Enter Your Email" />
+                <center> <button type="submit">
+                  We'll get back to you!
+                </button> </center>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info_section -->
+
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved 
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}">
+  </script>
+  <!-- bootstrap js -->
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
+  <!-- custom js -->
+  <script src="{% static 'js/custom.js' %}"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Hirevac</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}">
+
+  <!-- fonts style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+
+<!-- font awesome style -->
+<link href="{% static 'font-awesome.min.css' %}" rel="stylesheet" />
+<!-- nice select -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
+
+<!-- Custom styles for this template -->
+<link href="{% static 'style.css' %}" rel="stylesheet" />
+<!-- responsive style -->
+<link href="{% static 'responsive.css' %}" rel="stylesheet" />
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="/index">
+            <span>
+              Matrusri Home Page
+            </span>
+          </a>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/index">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/about"> About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/courses">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login2">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span>
+                    Login
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/register2">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span>
+                    Sign Up
+                  </span>
+                </a>
+              </li>
+             
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About Us
+              </h2>
+            </div>
+            <p>
+              Matrusri Engineering College, Saidabad, was established by Matrusri Education Society in 2011. 
+              The society was registered in 1980 with a group of far-sighted and distinguished engineers, doctors, lawyers, and administrators as its members, 
+              having a lofty vision and mission of imparting technical education of the highest standards among the students.
+              The college offers courses in Civil Engineering, Computer Science and Engineering, Electronics and Communication Engineering, 
+              Electrical and Electronics Engineering, Information Technology, and Mechanical Engineering. 
+              The instructional facilities are spacious, and the laboratories are continuously upgraded with state-of-the-art equipment. </p>
+              <p>
+              The college has a sophisticated Digital Library and also boasts an impressive repository of technical reference books and magazines 
+              catering to the needs of the students and faculty. 
+              Every effort is made to ensure that the students are trained in technical skills while inculcating in them a sense of social responsibility, 
+              in tune with the vision and mission of the college.
+                          </p>
+                          <a href="https://matrusri.edu.in/" target="_blank">
+              Read More
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{% static 'images/about-img.jpg' %}" alt="">
+            
+          </div>
+          <img src="{% static 'images/logo_credits.png' %}">
+        </div>
+        
+      </div>
+      
+    </div>
+   
+  </section>
+
+  <!-- end about section -->
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 info_links">
+          <h4>
+            Menu
+          </h4>
+          <ul>
+            <li>
+              <a href="/index">
+                Home
+              </a>
+            </li>
+            <li class="active">
+              <a href="/about">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="/courses">
+                Courses
+              </a>
+            </li>
+           
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h4>
+           Our Vision
+          </h4>
+          <p>
+            To be a premier academic instituion striving continuously for excellence in technical education, research and technological service to the nation.
+          </p>
+        </div>
+        <div class="col-md-3">
+          <div class="info_social">
+            <h4><center>Social Link</center>
+              
+            </h4>
+            <div class="social_container">
+              <div>
+                <a href="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div>
+                <a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div>
+                <a href="">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div>
+                <a href="">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info_form">
+            <h4> <center>
+              Contact us </center>
+            </h4>
+            <form action="">
+                <input type="text" placeholder="Enter Your Email" />
+                <center> <button type="submit">
+                  We'll get back to you!
+                </button> </center>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info_section -->
+
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved 
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}">
+  </script>
+  <!-- bootstrap js -->
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
+  <!-- custom js -->
+  <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>

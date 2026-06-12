@@ -1,0 +1,62 @@
+{% extends "base2.html" %}
+{% load static %}
+
+{% block start %}
+
+         <!-- slider section -->
+         <section class="slider_section " >
+            <div class="container " style="color: black !important;">
+              <div class="row">
+                <div class="col-lg-9 col-md-12 mx-auto">
+                  <div class="detail-box" style="color: black !important;">
+
+<body style="overflow: hidden;">
+  <!-- Your page content goes here -->
+</body>
+
+<div class="container mt-3">
+  <form class="col-md-8 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <h1><center>LOGIN</center></h1>
+
+      <br><br>
+
+      {% if messages %}
+          <div class="alert alert-primary" role="alert">
+              {% for message in messages %}
+                  {{ message }}
+              {% endfor %}
+          </div>
+      {% endif %}
+
+      <div class="row mb-3">
+          <div class="col-md-3">
+              <label for="exampleInputEmail1" class="form-label">Username</label>
+          </div>
+          <div class="col-md-8">
+              <input type="text" class="form-control" id="exampleInputEmail1" name="username" required>
+          </div>
+      </div>
+
+      <div class="row mb-3">
+          <div class="col-md-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+          </div>
+          <div class="col-md-8">
+              <input type="password" class="form-control" id="exampleInputPassword1" name="password" required>
+          </div>
+      </div>
+
+      <center><button type="submit" class="btn btn-primary">Submit</button></center>
+      <p></p>
+      <center>
+          <p>Don't have an account? <a href='/register2/'> Register </a></p>
+          <p>Forgot Password? <a href='/forgot_password/'> Reset Password </a></p>
+      </center>
+  </form>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends "base2.html" %}
+{% load static %}
+
+{% block extra_nav %}
+<ul class="navbar-nav">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+            CHECK MARKS 
+        </a>
+  
+  <ul class="dropdown-menu">
+      <li><a href="/perform_action/?action=os" class="nav-link btn" type="button">OS Marks</a></li>
+      <li><a href="/perform_action/?action=etc" class="nav-link btn" type="button">ETC Marks</a></li>
+      <li><a href="/perform_action/?action=ss" class="nav-link btn" type="button">S & S Marks</a></li>
+      <li><a href="/perform_action/?action=m3" class="nav-link btn" type="button">M3 Marks</a></li>
+      <li><a href="/perform_action/?action=fa" class="nav-link btn" type="button">FA Marks</a></li>
+      <li><a href="/perform_action/?action=co" class="nav-link btn" type="button">CO Marks</a></li>
+      <li><a href="/perform_action/?action=dbms" class="nav-link btn" type="button">DBMS Marks</a></li>
+      <li><a href="/perform_action/?action=total" class="nav-link btn" type="button">Total Marks</a></li>
+  
+  </ul>
+  </li>
+  </ul>
+
+
+ {% endblock %}
+
+
+
+{% block start %}
+
+<div class="container mt-5">
+<form class="mb-4">
+    <div class="row">
+        
+        {% if messages %}
+        <div id="alert-container">
+        <div class="alert alert-primary" role="alert">
+            {% for message in messages %}
+            {{message}}
+            {% endfor %}
+        </div></div>
+        {% endif %}
+        
+    </div>
+</form>
+<center> <h1 style="color: white;">Students List</h1>
+    <h4 style="color: white;"> Subject: TOTAL </h4></center>
+
+
+ 
+ <br>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+          
+            <th scope="col">Roll No</th>
+            <th scope = "col"> Name </th>
+            <th scope="col">S1</th>
+            <th scope="col">S2</th>
+            <th scope="col">Avg_S</th>
+            <th scope="col">I1</th>
+            <th scope="col">I2</th>
+            <th scope="col">Avg_I</th>
+            
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for rollno, marks in total_marks_dict.items %}
+              <tr>
+                  <td>{{ rollno }}</td>
+                  <td>{{ marks.name|default:'' }}</td>
+                  <td>{{ marks.s1_total }}</td>
+                  <td>{{ marks.s2_total }}</td>
+                  <td>{{ marks.avg_s_total }}</td>
+                  <td>{{ marks.i1_total }}</td>
+                  <td>{{ marks.i2_total }}</td>
+                  <td>{{ marks.avg_i_total }}</td>
+              </tr>
+          {% endfor %}
+      </tbody>
+      
+      
+      </table>
+
+
+
+
+
+        {% endblock %}

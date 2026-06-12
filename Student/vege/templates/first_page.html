@@ -1,0 +1,31 @@
+{% extends "base2.html" %}
+{% load static %}
+
+{% block extra_nav %}
+<ul class="navbar-nav">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+            CHECK MARKS 
+        </a>
+
+  <ul class="dropdown-menu">
+      <li><a href="/perform_action/?action=os" class="nav-link btn" type="button">OS Marks</a></li>
+      <li><a href="/perform_action/?action=etc" class="nav-link btn" type="button">ETC Marks</a></li>
+      <li><a href="/perform_action/?action=ss" class="nav-link btn" type="button">S & S Marks</a></li>
+      <li><a href="/perform_action/?action=m3" class="nav-link btn" type="button">M3 Marks</a></li>
+      <li><a href="/perform_action/?action=fa" class="nav-link btn" type="button">FA Marks</a></li>
+      <li><a href="/perform_action/?action=co" class="nav-link btn" type="button">CO Marks</a></li>
+      <li><a href="/perform_action/?action=dbms" class="nav-link btn" type="button">DBMS Marks</a></li>
+      <li><a href="/perform_action/?action=total" class="nav-link btn" type="button">Total Marks</a></li>
+
+  </ul>
+</li>
+</ul>
+    
+    {% endblock %}
+
+{% block start %}
+
+
+
+{% endblock %}

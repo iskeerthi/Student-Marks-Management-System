@@ -1,0 +1,92 @@
+{% extends "base2.html" %}
+{% load static %}
+
+                            
+{% block start %}
+
+<div class="container mt-5">
+<form class="mb-4">
+    <div class="row">
+        
+        {% if messages %}
+        <div id="alert-container">
+        <div class="alert alert-primary" role="alert">
+            {% for message in messages %}
+            {{message}}
+            {% endfor %}
+        </div></div>
+        {% endif %}
+        
+    </div>
+</form>
+<center> <h3>Marks List</h3></center>
+ <h4> Subject: {{sub}} </h4>
+ <br>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            
+            <th scope="col">Name</th>
+            <th scope="col">S1</th>
+            <th scope="col">S2</th>
+            <th scope="col">Avg_S</th>
+            <th scope="col">I1</th>
+            <th scope="col">I2</th>
+            <th scope="col">Avg_I</th>
+            <th scope="col">Total</th>
+            
+          </tr>
+        </thead>
+
+        <tbody>
+          
+            {% for student in queryset%}
+          <tr>
+            
+            <td>{{student.student_name}}</td>
+            <td>{{student.s1_marks}}</td>
+            <td>{{student.s2_marks}}</td>
+            <td>{{student.avg_s_marks}}</td>
+            <td>{{student.i1_marks}}</td>
+            <td>{{student.i2_marks}}</td>
+            <td>{{student.avg_i_marks}}</td>
+            <td>{{student.total}}</td>
+          </tr>
+    
+     {% endfor %}
+        </tbody>
+      </table>
+
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-end">
+          {% if queryset.has_previous %}
+          <li class="page-item"><a class="page-link" href="?page=1">&laquo; First</a> </li>
+          
+            <li class="page-item"><a class="page-link" href="?page={{ queryset.previous_page_number }}">Previous</a>
+          </li>
+          {% endif %}
+          <span class="current">
+            <li class="page-item"><a class="page-link">{{ queryset.number }}</a></li>
+            </span>
+
+            {% if queryset.has_next %}
+            <li class="page-item"><a class="page-link" href="?page={{ queryset.next_page_number }}">Next</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ queryset.paginator.num_pages }}">Last &raquo;</a></li>
+            {% endif %}
+        </ul>
+      </nav>
+
+
+    <script>
+      // Add a timer to hide the alert after 5 seconds (adjust as needed)
+      setTimeout(function() {
+        var alertContainer = document.getElementById('alert-container');
+        if (alertContainer) {
+          alertContainer.style.display = 'none';
+        }
+      }, 5000); // 5000 milliseconds = 5 seconds
+    </script>
+
+
+
+        {% endblock %}

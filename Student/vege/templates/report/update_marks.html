@@ -1,0 +1,106 @@
+{% extends "base2.html" %}
+{% block start %}
+
+<div class="container mt-5">
+          <form class="col-6 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data">
+              {%csrf_token%}
+                <div class="mb-3">
+                  <center> <p> <h2> DETAILS OF STUDENT </h2> </p> 
+                    <hr>
+                  {% for student in queryset%}
+                  <p> <b>Student ID </b>: {{student.rollno}} </p>
+                  <p> <b>Student Name </b>: {{student.student_name}} </p>
+                  <p> <b>Subject </b>: {{action}} </p> <br> </center>
+
+                  <div class="row mb-3">
+                    <div class="col-md-5">
+                      <label for="exampleInputEmail1" class="form-label">&nbsp;&nbsp;&nbsp;&nbsp; S1 Marks: </label>
+                    </div>
+                    <div class="col-md-3">
+                    <input type="text"  class="form-control text-center" disabled placeholder="{{student.s1_marks}}"></div>
+                    <div class="col-md-3">
+                      <input type="number" step="0.1"  class="form-control" id="s1" name="s1" oninput="validateInput('s1')">
+
+                  </div>
+                  </div>
+                  
+                  <div class="row mb-3">
+                    <div class="col-md-5">
+                      <label for="exampleInputEmail1" class="form-label">&nbsp;&nbsp;&nbsp;&nbsp; S2 Marks: </label>
+                      </div>
+                      <div class="col-md-3">
+                    <input type="text"  class="form-control text-center" disabled placeholder="{{student.s2_marks}}"></div>
+                    <div class="col-md-3">
+                    <input type="number"  step="0.1" class="form-control" id="s2" name="s2" oninput="validateInput('s2')">
+                  </div>
+                  
+                  </div>
+
+
+                  <div class="row mb-3">
+                    <div class="col-md-5">
+                      <label for="exampleInputEmail1" class="form-label">&nbsp;&nbsp;&nbsp;&nbsp; I1 Marks: </label>
+                      </div>
+                      <div class="col-md-3">
+                    <input type="text"  class="form-control text-center" disabled placeholder="{{student.i1_marks}}"></div>
+                    <div class="col-md-3">
+                    <input type="number"  step="0.1" class="form-control" id="i1" name="i1" oninput="validateInput('i1')">
+                  </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col-md-5">
+                      <label for="exampleInputEmail1" class="form-label">&nbsp;&nbsp;&nbsp;&nbsp; I2 Marks: </label>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="text"  class="form-control text-center" disabled placeholder="{{student.i2_marks}}"></div>
+                    <div class="col-md-3">
+                      <input type="number" step="0.1" class="form-control" id="i2" name="i2" oninput="validateInput('i2')">
+                  </div>
+                  </div>
+
+                  <br>
+                  <center><p> <b>TOTAL MARKS </b>: {{student.total}} </p> </center>
+
+                {% endfor %}
+                <center><button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-danger">Cancel</button></center>
+              </form>
+            </div>
+
+      </div>
+      
+    
+
+       
+
+      <script>
+        function validateInput(inputId) {
+            // Get the input element by id
+            var input = document.getElementById(inputId);
+    
+            // Parse the input value as a number
+            var value = parseInt(input.value, 10);
+    
+            if (inputId === 's1' || inputId === 's2') {
+                // Check if the value is greater than 10
+                if (value > 10) {
+                    // Display an alert message
+                    alert("Entered value should be less than or equal to 10");
+    
+                    
+                }
+            }
+    
+            if (inputId === 'i1' || inputId === 'i2') {
+                // Check if the value is greater than 20
+                if (value > 20) {
+                    // Display an alert message
+                    alert("Entered value should be less than or equal to 20");
+    
+                }
+            }
+          }
+       
+</script>    
+ {% endblock %}
